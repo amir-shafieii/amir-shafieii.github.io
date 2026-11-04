@@ -54,6 +54,25 @@ h1,h2,h3{font-family:var(--head);font-weight:300;margin:0;text-wrap:balance;lett
 .intro .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:22px}
 @media (max-width:820px){.intro{grid-template-columns:1fr;align-items:start}}
 
+/* cv */
+.cv{padding-block:0 clamp(56px,8vw,96px)}
+.cv-in{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:clamp(24px,5vw,72px);border-top:1px solid var(--ink);padding-top:28px}
+.cv-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--stone)}
+.cv-photo .who{margin-top:14px;font:400 22px/1.2 var(--head)}
+.cv-photo .label{margin-top:8px;display:block;line-height:1.5}
+.cv-cols{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,4vw,56px)}
+.cv h2{font-size:clamp(28px,3.4vw,40px);margin:12px 0 22px}
+.cv h3{font:500 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin:0 0 14px}
+.job{display:grid;grid-template-columns:96px 1fr;gap:4px 16px;padding:14px 0;border-top:1px solid var(--line)}
+.job .y{font:500 12px/1.7 var(--body);letter-spacing:.08em;color:var(--mute)}
+.job b{font:400 18px/1.35 var(--head);display:block}
+.job p{margin:4px 0 0;color:var(--soft);font-size:14.5px;line-height:1.55}
+.side+.side{margin-top:28px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:13px;color:var(--soft);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+@media (max-width:900px){.cv-in{grid-template-columns:1fr}.cv-photo{max-width:300px}.cv-cols{grid-template-columns:1fr}}
+@media (max-width:420px){.job{grid-template-columns:1fr}}
+
 /* work */
 .work{padding-block:8px 72px}
 .work-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;border-top:1px solid var(--ink);padding-top:22px;margin-bottom:28px}
@@ -114,7 +133,7 @@ footer{border-top:1px solid var(--line);padding-block:20px;color:var(--mute);fon
 <header class="bar">
   <div class="wrap">
     <a href="#top" aria-label="EEFA Architects, back to top"><img src="img/logo.png" alt="EEFA Architects"></a>
-    <nav><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+    <nav><a href="#cv">CV</a><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
   </div>
 </header>
 
@@ -132,6 +151,39 @@ footer{border-top:1px solid var(--line);padding-block:20px;color:var(--mute);fon
     <div>
       <p>EEFA Architects works with architects, interior designers, builders and developers on concept design, facade options and photorealistic renders. Every space starts from how people actually live in it: where they gather, pause, move and retreat.</p>
       <div class="meta"><span class="label">Based in Tehran</span><span class="label">Working worldwide</span><span class="label">Fixed-price packages</span></div>
+    </div>
+  </section>
+
+  <section class="wrap cv" id="cv">
+    <div class="cv-in">
+      <div class="cv-photo">
+        <img src="img/amir.jpg" alt="Amir Shafiei, architect" loading="lazy">
+        <div class="who">Amir Shafiei</div>
+        <span class="label">Architect · Founder, EEFA Architects</span>
+      </div>
+      <div>
+        <div class="label">Curriculum vitae</div>
+        <h2>Architect and 3D visualization specialist.</h2>
+        <div class="cv-cols">
+          <div>
+            <h3>Experience</h3>
+            <div class="job"><span class="y">2016 – now</span><div><b>Independent practice · EEFA Architects</b><p>Residential, interior, facade and landscape design. Architecture competitions: Zigoorat 2nd Architectural Event, Palazzo residential complex, Sabzevar Pars Steel plant gateway. 3D artist for design teams, software tutoring.</p></div></div>
+            <div class="job"><span class="y">2017 – 2020</span><div><b>Xarrin Advanced Systems</b><p>3D product modeling, renders and animations for website and catalog, catalog and graphic design.</p></div></div>
+            <div class="job"><span class="y">2020 – 2021</span><div><b>Diba Tensile Structure</b><p>Developed architectural designs with the construction team, site and landscape planning, model making for industrial parts.</p></div></div>
+          </div>
+          <div>
+            <div class="side">
+              <h3>Education</h3>
+              <div class="job"><span class="y">2015 – 2017</span><div><b>Master of Architecture</b><p>University of Science and Culture, Tehran</p></div></div>
+              <div class="job"><span class="y">2013 – 2015</span><div><b>Bachelor of Architecture</b><p>Islamic Azad University of Qazvin</p></div></div>
+            </div>
+            <div class="side">
+              <h3>Software</h3>
+              <div class="tags"><span>3ds Max</span><span>V-Ray</span><span>Corona</span><span>Rhino</span><span>SketchUp</span><span>Lumion</span><span>KeyShot</span><span>AutoCAD</span><span>Photoshop</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
